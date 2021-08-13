@@ -1,0 +1,769 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+$white: #FFFFFF;
+$orange: #FF7B47;
+$blue: #0D5C63;
+$textColor: #252B42;
+$secondTextColor: #737373;
+$backgroundColor: #FAFAFA;
+$border: #d8d8d8;
+$backGrey: #FAFAFA;
+$inputColor: #CBCBCB;
+
+%standartFont {
+    font-family: "Montserrat" sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: $secondTextColor;
+}
+
+%font {
+    font-family: "Montserrat" sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: $secondTextColor;
+}
+
+%titles {
+    font-family: "Montserrat" sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    color: $textColor;
+}
+
+%titlesWhite {
+    font-family: "Montserrat" sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    color: $white;
+}
+
+%headingFont {
+    font-family: "Montserrat" sans-serif;
+    font-size: 58px;
+    font-weight: 800;
+    color: $textColor;
+}
+
+%main {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+%logoFont {
+    font-family: "Montserrat" sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+%hoverEffect {
+    cursor: pointer;
+    color: $blue;
+}
+%button {
+    margin-top: 35px;
+    margin-bottom: 155px;
+    padding: 10px 36px;
+    border-radius: 5rem;
+    text-decoration: none;
+    transition: .3s ease all;
+}
+
+@mixin hover {
+    cursor: pointer;
+    background-color: $white;
+    color: $orange;
+    border: 2px solid $orange;
+}
+
+@mixin display {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+@mixin font {
+    font-size: 16px;
+    font-weight: 700;
+    color: $textColor;
+}
+
+@mixin input {
+    font-size: 14px;
+    font-weight: 400;
+    color: $secondTextColor;
+}
+
+*,
+*::before,
+*::after {
+    @extend %main
+}
+
+body {
+    background-image: url("../.images/background.png");
+    background-repeat: no-repeat;
+    width: 100%;
+    font-family: "Montserrat" sans-serif;
+    background-color: $white;
+}
+
+header {
+    width: 100%;
+}
+
+.header {
+    @include display;
+    margin-top: 30px;
+    margin-left: 40px;
+    margin-right: 40px;
+    justify-content: space-between;
+}
+
+.nav {
+    ul {
+        display: flex;
+        flex-wrap: nowrap;
+        text-decoration: none;
+        list-style-type: none;
+    }
+    &-menu {
+        margin-right: 21px;
+        margin-top: 40px;
+        @extend %standartFont;
+        transition: .5s ease all;
+        &:hover {
+            @extend %hoverEffect;
+        }
+    }
+    &-logo {
+        @extend %logoFont;
+        margin-left: 160px;
+        margin-right: 36px;
+        margin-top: 36px;
+    }
+}
+
+.icon-menu {
+    margin-top: 45px;
+    margin-right: 59px;
+}
+
+.first_meeting {
+    margin-top: 150px;
+    margin-left: 195px;
+    margin-bottom: 100px;
+    p {
+        @extend %font;
+    }
+}
+
+h1 {
+   @extend %headingFont;
+   margin-bottom: 35px;
+   line-height: 1.3;
+}
+
+.g-q-n {
+    @extend %button;
+    color: $white;
+    background-color: $orange;
+}
+
+.g-q-n:hover {
+    @include hover
+}
+
+.l-m {
+    @extend %button;
+    color: $blue;
+    background-color: Transparent;
+    border: 1px solid $blue;
+}
+
+.l-m:hover {
+    cursor: pointer;
+    background-color: $blue;
+    color: $white;
+}
+
+h2 {
+    @extend %titles;
+    margin-bottom: 10px;
+}
+
+.matters-title p {
+    @extend %standartFont;
+    margin-bottom: 45px;
+}
+
+.client-matters {
+    margin-left: 195px;
+    margin-top: 145px;
+}
+
+.matters-columns {
+    @include display;
+}
+
+.columns {
+    display: flex;
+    align-items: center;
+    width: 28%;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    background-color: $backgroundColor;
+    padding: 20px;
+    border: 2px solid $border;
+    &:hover {
+        cursor: pointer;
+        background-color: $white;
+    }
+}
+
+.matters {
+    padding-left: 15px;
+}
+
+.who-we-are {
+    margin-top: 100px;
+    padding-bottom: 136px;
+    background-color: $backGrey;
+}
+
+.video-2 {
+    display: none;
+}
+
+.video-3 {
+    display: none;
+}
+
+.main-title {
+    text-align: center;
+    h3 {
+        @extend %titles;
+        padding-top: 100px;
+        margin-bottom: 15px;
+    }
+    p {
+        @extend %standartFont;
+        margin-bottom: 100px;
+    }
+}
+
+.most-trusted {
+    margin-left: 195px;
+    @include display;
+}
+
+.text {
+    margin-left: 120px;
+    h4 {
+        @extend %titles; 
+        margin-bottom: 10px;
+        margin-top: 30px;
+    }
+    p {
+        @extend %standartFont;
+    }
+}
+
+.jumps {
+    display: flex;
+    text-align: center;
+    margin-top: 40px;
+    span {
+        text-align: left;
+        margin-left: 20px;
+        @include font;
+    }
+}
+
+.small-scale {
+    margin-top: 5px;
+    margin-left: 50px;
+}
+
+.clients-say {
+    background-color: $textColor;
+}
+.say-title {
+    text-align: center;
+    h3 {
+        padding-top: 80px;
+        @extend %titlesWhite;
+        margin-bottom: 10px;
+    }
+    p {
+        @extend %standartFont;
+        color: $white;
+        margin-bottom: 90px;
+    }
+}
+
+.designer {
+    width: 35%;
+    background-color: $white;
+    margin-left: 42px;
+    span {
+        @extend %logoFont;
+        color: $textColor;
+    }
+    &-columns {
+        display: flex;
+        flex-wrap: nowrap;
+        width: 100%;
+        padding: 5px;
+        padding-bottom: 130px;
+    }
+}
+
+.foto {
+    margin-left: -40px;
+}
+
+.des-meaning {
+    margin-left: 60px;
+    p {
+        @extend %standartFont;
+    }
+}
+
+.des-say {
+    @extend %standartFont;
+    margin: 15px 50px 30px 50px;
+    padding-bottom: 15px;
+}
+
+.our-team {
+    background-color: $backgroundColor;
+    padding-bottom: 110px;
+}
+.team {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    width: 100%;
+    &-title {
+        text-align: center;
+        p {
+            @extend %standartFont;
+            margin-bottom: 50px;
+        }
+        h3 {
+            padding-top: 80px;
+            @extend %titles;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.person {
+    text-align: center;
+    margin-right: 30px;
+    padding: 30px 51px;
+    background-color: $white;
+    &:hover {
+        cursor: pointer;
+        box-shadow: 5px 5px 5px 5px #707070;
+    }
+}
+
+.p-1 {
+   @extend %standartFont;
+   color: $orange;
+   padding-top: 5px;
+   padding-bottom: 5px;
+}
+
+.p-2 {
+    @include font;
+    padding-bottom: 5px;
+}
+
+.p-3 {
+    @extend %standartFont;
+}
+
+.over-the-world {
+    background-color: $textColor;
+    height: 807px;
+}
+
+.world {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    &-text {
+        h3 {
+            @extend %titlesWhite;
+            padding-top: 100px;
+            line-height: 1.3;
+            margin-bottom: 15px;
+        }
+        p {
+            @extend %standartFont;
+            color: $white;
+        }
+    }
+}
+
+.map {
+    margin-top: 129.95px;
+    margin-left: 155px;
+}
+
+.quote {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin-top: 150px;
+    &-foto {
+        display: flex;  
+    }
+    &-input {
+        display: flex;
+        flex-direction: column;
+        background-color: $white;
+        padding: 40px 50px;
+        h3 {
+            @extend %titles;
+            margin-bottom: 40px;
+        }
+        p {
+            @extend %standartFont;
+            margin-bottom: 10px;
+            color: $textColor;
+            font-weight: 600;
+        }
+        input {
+            padding: 11px 490px 11px 23px;
+            background-color: $backgroundColor;
+            margin-bottom: 12px;
+            @include input;
+            border: 1px solid $inputColor;
+            border-radius: 5px;
+        }
+        button {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            color: $white;
+            background-color: $orange;
+            margin-top: 40px;
+            transition: .3s ease all;
+            &:hover {
+                @include hover;
+            }
+        }  
+    }
+    &-none {
+        display: none;
+    }  
+}
+
+input:focus::-webkit-input-placeholder { color:transparent; 
+}
+
+footer {
+    margin-top: 400px;
+}
+
+.information {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    padding-top: 80px;
+}
+
+.creation {
+    text-align: center;
+    @extend %standartFont;
+    background-color: $backgroundColor;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.p-title {
+    @extend %logoFont;
+    color: $textColor;
+    margin-bottom: 25px;
+}
+
+.p-info {
+    @extend %standartFont;
+    margin-bottom: 15px;
+    &:hover {
+        cursor: pointer;
+        color: $textColor;
+    }
+}
+
+.icons {
+    margin-bottom: 165px;
+    img {
+        margin-right: 15px;
+    }
+}
+
+.info-columns {
+    margin-right: 80px;
+}
+
+@media screen and (max-width: 1200px) {
+    body {
+        width: 100%;
+    }
+    .text {
+        margin-left: 50px;
+    }
+    .quote-input {
+        padding: 40px 20px;
+    }
+    .most-trusted {
+        margin: 0;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 1124px) {
+    .quote-input input {
+        padding: 11px 300px 11px 23px;
+    }
+    .client-matters {
+        margin-left: 100px;
+    }
+}
+
+@media screen and (max-width: 1006px) {
+    .designer {
+        width: 30%;
+    }
+    .person {
+        padding: 30px 40px;
+    }
+    .map {
+      margin-left: 100px;  
+    }
+    .text span {
+        font-size: 12px;
+    }
+    .matters-columns {
+        margin-left: 0px;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .most-trusted {
+        flex-direction: column;
+        align-items: center;
+    } 
+    .matters-columns {
+        flex-direction: column;  
+    } 
+    .columns {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 915px) {
+    .quote-input input {
+        padding: 11px 200px 11px 23px;
+    }
+    .person {
+        padding: 30px 30px;
+    }
+    h1 {
+        font-size: 50px;
+    }   
+    h2 {
+        font-size: 30px;
+    }
+    .text h4 {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 880px) {
+    .designer {
+        width: 80%;
+        margin-bottom: 10px;
+    }
+    .designer-columns {
+        flex-direction: column;
+    }
+    .text {
+        width: 80%;
+    }
+    .world {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .map {
+        margin-left: 0px;
+    }
+    footer {
+        margin-top: 650px;
+    }
+    
+}
+
+@media screen and (max-width: 831px) {
+    .team {
+        flex-direction: column;
+        padding-left: 250px;
+    }
+    .person {
+        width: 50%;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 815px) {    
+    .columns {
+        width: 50%;
+    }
+    .quote {
+        flex-direction: column;
+    }
+    footer {
+        margin-top: 1200px;
+    }
+    .quote-foto {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 651px) {
+    .quote-input input {
+        padding: 11px 100px 11px 23px;
+    }
+    .information {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .info-columns {
+        margin-right: 0px;
+    }
+    .icons {
+        margin-bottom: 50px;
+    }
+    .quote-input {
+        width: 90%;
+    }
+    .icon-menu {
+        display: none;
+    }
+    .nav-logo {
+        margin-left: 50px;
+    }
+    .first_meeting {
+        margin-left: 100px;
+    }
+    .team {
+        padding-left: 200px;
+    }
+    .client-matters {
+        margin-left: 50px;
+    }
+    .columns {
+        margin-right: 0px;
+    }
+}
+
+@media screen and (max-width: 615px) {
+    .video-1 {
+        display: none;
+    }
+    .video-2 {
+        display: block;
+    }
+    .team {
+        padding-left: 100px;
+    }
+}
+
+@media screen and (max-width: 507px) {
+    .client-matters {
+        margin-left: 20px;
+    }
+    .nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav-logo {
+        margin-left: 20px;
+    }
+    .first_meeting {
+        margin-left: 50px;
+        margin-top: 50px;
+    }
+    .client-matters {
+        margin-top: 50px;
+    }
+    .video-2 {
+        display: none;
+    }
+    .video-3 {
+        display: block;
+    }
+    .team {
+        padding-left: 50px;
+    }
+}
+
+@media screen and (max-width: 455px) {
+    .matters {
+        font-size: 12px;
+    }
+    .map {
+        display: none;
+    }
+    .team {
+        padding-left: 20px;
+    }
+    .person {
+        padding-left: 10px;
+    }
+    footer {
+        margin-top: 1000px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .person {
+        padding-right: 80px;
+    }
+    .matters{
+        padding-left: 5px;
+    }
+    .columns {
+        padding: 10px;
+    }
+    .team {
+        padding-left: 5px;
+    }
+    .quote-foto {
+        display: none;
+    }
+    .quote-none {
+        display: block;
+    }
+    footer {
+        margin-top: 650px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .columns {
+        padding: 2px;
+    }
+    .matters {
+        padding-left: 0px;
+    }
+    .first_meeting {
+        margin-left: 30px;
+    }
+}
